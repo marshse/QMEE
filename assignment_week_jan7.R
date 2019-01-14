@@ -27,7 +27,7 @@ fish_info_data %>%
 
 fish_info_data %>% 
   mutate(body_condition = 100 * (Wt/SL))
-#  Note that Body condition should have the cubed version of the Standard Length 
+#  Note that Fulton's Body condition should have the cubed version of the Standard Length (SL) 
 ## TO BE FIXED!
 
        
