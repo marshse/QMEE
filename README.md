@@ -4,7 +4,7 @@
 
 I have selected two datasets that will need to be combined (and refined at some point) and were collected during a field season in May-June 2016 at STARESO Research Station (Corsica, France).
 
-We study a small fish species, <i>Symphodus ocellatus</i>, during their spawning season in the Mediterranean Sea each spring.  There are three male types in the system (type is not genetic, but life history traint and based on amount of growth in first year). Nesting males are the largest most colourful males who make a nest, court females, and fan eggs. Sneaker males are the smallest, resemble females and hang around active nests attempting to sneak fertilizations.  Satellite males are an intermediate size and will associate with a Nesting Male and help by bringing in nearby females, chase off sneaker males, but will also attempt to sneak fertilizations when possible.  Females spawn in multiple nests and provide no care.
+We study a small fish species, <i>Symphodus ocellatus</i>, during their spawning season in the Mediterranean Sea each spring.  There are three male types in the system (type is not genetic, but a life history trait and based on amount of growth in first year). Nesting males are the largest most colourful males who make a nest, court females, and fan eggs. Sneaker males are the smallest, resemble females and hang around active nests attempting to sneak fertilizations.  Satellite males are an intermediate size and will associate with a Nesting Male and help by bringing in nearby females, chase off sneaker males, but will also attempt to sneak fertilizations when possible.  Females spawn in multiple nests and provide no care.
 
 
 ## Corse 2016 Genetics book.xlsx
