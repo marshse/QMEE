@@ -4,16 +4,16 @@
 
 I have selected two datasets that will need to be combined (and refined at some point) and were collected during a field season in May-June 2016 at STARESO Research Station (Corsica, France).
 
-We study a small fish species, Symphodus ocellatus, during their spawning season in the Mediterranean Sea each spring.  There are three male types in the system (type is not genetic, but life history traint and based on amount of growth in first year). Nesting males are the largest most colourful males who make a nest, court females, and fan eggs. Sneaker males are the smallest, resemble females and hang around active nests attempting to sneak fertilizations.  Satellite males are an intermediate size and will associate with a Nesting Male and help by bringing in nearby females, chase off sneaker males, but will also attempt to sneak fertilizations when possible.  Females spawn in multiple nests and provide no care.
+We study a small fish species, <i>Symphodus ocellatus</i>, during their spawning season in the Mediterranean Sea each spring.  There are three male types in the system (type is not genetic, but life history traint and based on amount of growth in first year). Nesting males are the largest most colourful males who make a nest, court females, and fan eggs. Sneaker males are the smallest, resemble females and hang around active nests attempting to sneak fertilizations.  Satellite males are an intermediate size and will associate with a Nesting Male and help by bringing in nearby females, chase off sneaker males, but will also attempt to sneak fertilizations when possible.  Females spawn in multiple nests and provide no care.
 
 
 ## Corse 2016 Genetics book.xlsx
-- This spreadsheet contains information about all fish that were caught and brought into the lab for processing before being released back into the study site.  It gives information on:
-        fish ID 
+- This spreadsheet contains information about all fish that were caught and brought into the lab for processing before being released back into the study site.  It gives information on:	
+	fish ID 
         standard length [SL]
         weight [WT]
         individual mark given [Mark]
-        type or sex [ NM = Nesting Male; SAT = Satelite Male; SN = Sneaker Male; F = Female]
+        type or sex [ NM = Nesting Male; SAT = Satellite Male; SN = Sneaker Male; F = Female]
         nest # where they were captured (Focal nests are identified with a numbered cork so that we can map the location and revisit the nest on a daily basis.)
         study used for [sat var = satellite variation; sn removal = sneaker removal]
         
