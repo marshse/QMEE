@@ -8,7 +8,8 @@ We study a small fish species, <i>Symphodus ocellatus</i>, during their spawning
 
 
 ## Corse 2016 Genetics book.xlsx
-- This spreadsheet contains information about all fish that were caught and brought into the lab for processing before being released back into the study site.  It gives information on:	
+- This spreadsheet contains information about all fish that were caught and brought into the lab for processing before being released back into the study site.  
+- It gives information on:	
 	fish ID 
         standard length [SL]
         weight [WT]
