@@ -4,6 +4,8 @@
 
 I have selected two datasets that will need to be combined (and refined at some point) and were collected during a field season in May-June 2016 at STARESO Research Station (Corsica, France).
 
+*BMB: slightly better to use asterisks to denote italics in a .md file*
+
 We study a small fish species, <i>Symphodus ocellatus</i>, during their spawning season in the Mediterranean Sea each spring.  There are three male types in the system (type is not genetic, but a life history trait and based on amount of growth in first year). Nesting males are the largest most colourful males who make a nest, court females, and fan eggs. Sneaker males are the smallest, resemble females and hang around active nests attempting to sneak fertilizations.  Satellite males are an intermediate size and will associate with a Nesting Male and help by bringing in nearby females, chase off sneaker males, but will also attempt to sneak fertilizations when possible.  Females spawn in multiple nests and provide no care.
 
 
@@ -21,7 +23,7 @@ We study a small fish species, <i>Symphodus ocellatus</i>, during their spawning
 
 ## Satellite variation spreadsheet_2016_07_06.xlsx
 
-- This spreadsheet contains behavioural observations conducted for a 10 miunte period on focal nests.  
+- This spreadsheet contains behavioural observations conducted for a 10 minute period on focal nests.  
 - Data collected:
         number of sneakers near the nest every minute
         location of the Nesting Male every 30 seconds
@@ -44,7 +46,11 @@ We study a small fish species, <i>Symphodus ocellatus</i>, during their spawning
         - Do spawning rates changes after the removal of sneaker males?
         - Do Nesting Males change certain behaviours after removal of sneaker males?
         - Do Satellite Males change certain behaviours after removal of sneaker males?
-        - Do female visits and spawning rates change ater removal of sneaker males?
+        - Do female visits and spawning rates change after removal of sneaker males?
         
         Not an exhaustive list and will progress thought the term! :-)
         
+## BMB comments (17 Jan)
+
+- Try to frame questions in terms of biological expectations and meanings. The answer to "does X change after Y" is always "yes", because everything changes everything else in biology. The more specific you can make your predictions, the better. Null hypotheses such as "there is no change in the spawning rate" are important for defining statistical procedures, but are trivial and boring for biology.  You *might* have a truly exploratory question (you don't have any specific ideas about how behaviour will change, you just want to see what you can see), but in that case you will probably need to give up on calculating p-values.
+
