@@ -1,6 +1,5 @@
 library(tidyverse)
 library(readr)
-library(g.data)
 
 ## Import the data
 fish_info_data <- read.csv("assignment_week_2/Corse_2016_Genetics_book.csv")
