@@ -9,7 +9,6 @@ fish_info_data <- read.csv("assignment_week_2/Corse_2016_Genetics_book.csv")
 str(fish_info_data)
 summary(fish_info_data)
 
-
 ## ASSIGNMENT: Examine data for mistakes
 # I examined and everything has the proper class assignment and 
 # no errors generated in the summary.
@@ -17,9 +16,15 @@ summary(fish_info_data)
 
 # Select data I want to plot (Type, SL, Wt)
 # Need to exlude Type(rostratus and Sat/sn)! I can't get this to work yet.
+
 fish_info_data2 <- fish_info_data %>% 
-  # select(Type = NM, Sat, sn, f) %>% 
+#  filter(fish_info_data, Type == c("NM", "Sat", "sn", "f")) %>% 
   select(Type, SL, Wt)
+
+## If I do it this way why is this excluding some of the vectors I want? Got 19 obs.
+# fish_info_data2 <- filter(fish_info_data, Type == c("NM", "Sat", "sn", "f")) %>% 
+#  select(Type, SL, Wt)
+
 
 # Re-examine summary after selecting columns
 summary(fish_info_data2)
@@ -47,4 +52,3 @@ ggplot(data = fish_info_data2, mapping = aes(x = Type, y = SL)) +
 
 # Get summary to check Type names has been changed
 #summary(fish_info_data3)
-
