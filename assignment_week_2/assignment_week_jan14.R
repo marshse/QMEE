@@ -42,9 +42,25 @@ ggplot(data = fish_info_data2, mapping = aes(x = Type, y = Wt)) +
 # But I have introduced something weird here for the rostratus. No value at ~5.3!
 
 
-#  PLot the SL (standard length) of fish by type (Fem, NM, SatM,SnM)
+#  PLot the SL (standard length) of fish by type (Fem, NM, SatM, SnM)
 
 ggplot(data = fish_info_data2, mapping = aes(x = Type, y = SL)) +
   geom_boxplot()
 
+
+#  PLot the Body Condition of fish by type (Fem, NM, SatM, SnM)
+
+fish_info_data3 <- fish_info_data2 %>% 
+  mutate(body_condition = 100 * (Wt/(10*SL)^3))
+
+ggplot(data = fish_info_data3, mapping = aes(x = Type, y = body_condition)) +
+  geom_boxplot()
+
+
+# Look at Wt and SL in females only. Can't seem to filter just Females.
+
+# fish_info_data3 <- filter(Type == "Female")
+ggplot(fish_info_data3,
+       aes(y = Wt, x = SL)) +
+  geom_point()
 
