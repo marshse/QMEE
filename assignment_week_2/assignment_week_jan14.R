@@ -2,7 +2,7 @@ library(tidyverse)
 library(readr)
 
 ## Import the data
-fish_info_data <- read.csv("assignment_week_2/Corse_2016_Genetics_book.csv")
+fish_info_data <- read.csv("Corse_2016_Genetics_book.csv")
 
 ## ASSIGNMENT: Examine the structure and look for mistakes on class assignment!
 # str(fish_info_data)
@@ -14,11 +14,10 @@ fish_info_data <- read.csv("assignment_week_2/Corse_2016_Genetics_book.csv")
 
 
 # Select data I want to plot (Type, SL, Wt)
-# Need to exlude Type(rostratus and Sat/sn)! I can't get this to work yet.
-## If I take out the comment here I get only some of the rows I want. Got only 19 obs.
+# Need to exlude Type(rostratus and Sat/sn)
 
 fish_info_data2 <- fish_info_data %>% 
-#  filter(Type == c("NM", "Sat", "sn", "f")) %>% 
+  filter(Type %in% c("NM", "Sat", "sn", "f")) %>% 
   select(Type, SL, Wt)
 
 
@@ -57,10 +56,12 @@ ggplot(data = fish_info_data3, mapping = aes(x = Type, y = body_condition)) +
   geom_boxplot()
 
 
-# Look at Wt and SL in females only. Can't seem to filter just Females.
+# Look at Wt and SL in females only. 
 
-# fish_info_data3 <- filter(Type == "Female")
-ggplot(fish_info_data3,
+fish_info_data4 <- fish_info_data3 %>%
+  filter(Type %in% "Female")
+
+ggplot(fish_info_data4,
        aes(y = Wt, x = SL)) +
   geom_point()
 
