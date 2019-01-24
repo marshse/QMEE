@@ -1,9 +1,4 @@
----
-title: "README"
-author: "SMR"
-date: '2019-01-23'
-output: html_document
----
+Assignment
 
 Construct some (i.e., more than one) ggplots using your data. 
 
