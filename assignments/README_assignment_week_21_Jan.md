@@ -1,3 +1,5 @@
+## JD: Not sure whether you meant to explain something to us here
+
 # Assignment_week_21_Jan
 
 ## Construct some (i.e., more than one) ggplots using your data. 
