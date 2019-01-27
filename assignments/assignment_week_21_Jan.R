@@ -64,5 +64,5 @@ ggplot(data = fish_info_data5,mapping = aes(x = Date, y = body_condition, colour
 # TO DO!
 # Need to clean up dates so that if displays in the proper order
 # Draw lines between each of the Types across the dates? General line?
-
+# trying to upload to GitHub
 
