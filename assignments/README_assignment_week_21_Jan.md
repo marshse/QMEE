@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 ## JD: Not sure whether you meant to explain something to us here
 
-# Assignment_week_21_Jan
->>>>>>> e2b370e91a3cb8ab777b7681341dc7d56e9b9b9e
+## SMR: Apologies!  This assignment was not ready to go yet and I was in the midst of restructuring the folders.
 
 
-=======
+
 ## Assignment_week_21_Jan
 
 ### Construct some (i.e., more than one) ggplots using your data. 
@@ -15,17 +12,19 @@
 Discuss:
 - what you are trying to show
 
-    - Started looking at the information on our fish cuaght in 2016 using geom_jitter() versus geom_point()
+    - Visualized body size data on fish (*S. ocellatus*), by Type, caught in 2016 using geom_jitter() versus geom_point()
+    
+    - Played with adding geom commands together and changing visual parameters (colour, position, size)
+    
+    - Plot body measurements taken over the field season by Type (my date column needs to be reformatted to do this)
 
 - some of the choices I have made
 
 - the basis for my choices (e.g., Cleveland hierarchy, proximity of comparisons, or other principles of graphical communication)
 
+    - 
+    
 
 
 
-
-
-
->>>>>>> 6bdd641024a47401b209873f619a1c95f1711c07
 
