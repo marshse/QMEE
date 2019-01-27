@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+## JD: Not sure whether you meant to explain something to us here
+
+# Assignment_week_21_Jan
+>>>>>>> e2b370e91a3cb8ab777b7681341dc7d56e9b9b9e
 
 
 =======
