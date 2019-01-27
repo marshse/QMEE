@@ -23,9 +23,10 @@ Discuss:
 
 - the basis for my choices (e.g., Cleveland hierarchy, proximity of comparisons, or other principles of graphical communication)
 
-    - 
+    - I used proximity and colour in order to help visualize the size data taken on four different Types (f, NM, Sat, Sn) of *S. ocellatus* during the 2016 field season.
     
-
+    
+Thank you for all of the (continuously) useful feedback! ~SMR
 
 
 
