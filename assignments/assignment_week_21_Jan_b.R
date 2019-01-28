@@ -78,6 +78,9 @@ ggplot(data = fish_info_data5,mapping = aes(x = Date, y = body_condition, colour
 # Need to clean up dates so that if displays in the proper order
 # Working with lubridate to figure this out:  
 # stamp("20-May") (D)
+# Suzanne suggests:
+# as.numeric(fish_info_data$Date) 
+
 
 # Draw lines between each of the Types across the dates for last plot?
 
