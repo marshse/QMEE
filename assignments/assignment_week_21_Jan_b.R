@@ -63,26 +63,41 @@ ggplot(fish_info_data5, aes(y = Wt, x = SL, colour = Type)) +
 fish_info_data4 <- fish_info_data %>% 
   filter(!(Type %in% c("rostratus","Sat/sn"))) %>% 
   droplevels() %>% 
-  select(Type, SL, Wt, Date)
+  select(Type, SL, Wt, Date) 
 
+str(fish_info_data4)
 fish_info_data5 <- fish_info_data4 %>% 
   mutate(body_condition = 100000000 * (Wt/(10*SL)^3))
+ 
+# Have to change Date column from CHARACTER to DATE 
+fish_info_data5$Date<-as.Date(fish_info_data5$Date, format="%d-%B")
+
+# Need to fix that the year "2019" was added to the Date column
+fish_info_data5$Date<-update(fish_info_data5$Date, year = 2016)
 
 ggplot(data = fish_info_data5,mapping = aes(x = Date, y = body_condition, colour=Type)) + 
   geom_point() +
   theme_bw() + scale_color_futurama()
 
 
+
 # TO WORK THROUGH STILL!
 
-# Need to clean up dates so that if displays in the proper order
-# Working with lubridate to figure this out:  
-# stamp("20-May") (D)
+# Draw lines between each of the Types across the dates for last plot?
+
+
+# My research group made these suggestions to help me format the Date column:
+# WAS ONE BETTER THAN THE OTHER?
+
 # Suzanne suggests:
 # as.numeric(fish_info_data$Date) 
 
+# Jenn suggests:
+## fish_info_data5$Date<-as.Date(fish_info_data5$Date, format="%d-%B")
 
-# Draw lines between each of the Types across the dates for last plot?
+
+
+
 
 
 
