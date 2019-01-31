@@ -1,48 +1,99 @@
 
-Answer the MMV question. Get help where you need it, but write up the answer by yourself.
+Assignment_week_28_Jan_PART_1
 
-MMV (Mathematical Modeling Virus) is a viral infection that can cause a serious disease (called MMD)
-
-MMD patients are unable to control their natural urge to make mathematical models that attempt to describe biological phenomena
+PROBLEM:
+MMV (Mathematical Modeling Virus) is a viral infection that can cause a serious disease (called MMD).
+MMD patients are unable to control their natural urge to make mathematical models that attempt to describe 
+biological phenomena.
 
 The rapid MMV test gives a positive result:
-
-100% of the time for people with the virus
-
-5% of the time for people without the virus
-
-A certain population has a prevalence of 1%
+- 100% of the time for people with the virus
+- 5% of the time for people without the virus
+- A certain population has a prevalence of 1%
 
 You pick a person from this population at random, and test them, and the test is positive.
 
-What is the probability that they have MMV?
+1)  What is the probability that they have MMV?
 
-You learn that your friend has a positive rapid test for MMV. What do you tell them?
-
-SOLUTION: 
-
-Assign probabilities to each of these:
-
-A certain population has a prevalence of 1%	1/100
-
-These are not mutally exclusive events. They are EITHER Positive or Negative:
-
-Rapid MMV test gives a positive result 100% of the time for people with the virus		100/100
-
-Rapid MMV test gives a positive result 5% of the time for people without the virus		95/100
-(example. A test that yields positive results in 10 of 100 nondiseased patients has a specificity of 0.90)
+2)  You learn that your friend has a positive rapid test for MMV. What do you tell them?
 
 
-You pick a person from this population at random, and test them, and the test is positive.
+SOLUTION.Question_1: 
+1)  What is the probability that they have MMV?
 
-What is the probability that they have MMV?
+Assign probabilities to each of these conditions.
+These are not mutally exclusive events. This question is one based on conditional probability. 
+Baye's Theorem can help! :-)
+
+If we rephrase the questions:
+  What is the probability that they have "MMV" given that they get a "positive test"? Or P(A|B)
+  
+Baye's Theorem:
+P(A|B) = P(B|A)*P(A) / P(B)
+
+Where:
+
+P(A) = the chance or probability of having MMV in this particular population
+       We already know this is 1% or 1/100
+       
+P(B) = the chance or probability that you take the test and it return positive for MMV
+       This requires combining the probability for BOTH 
+       - geting a POSITIVE result when you have MMV (100% positive result)  
+       - getting a POSITIVE result when you DON'T have MMV (5% False positive result)
+       
+P(B|A) = THis is the probability that you test positive for MMV given that you HAVE MMV
+        We know that this is 100% or 1       
+       
+Constructing a table can help visualize the problem (and help with the math!):
+If we take a populations of 100 people and apply the above info to our population we can calculate:
 
 
-100/100 * (5/100 + 1/100)  = 0.0105
+            Have MMV    Don't Have MMV    Pop TOTALS
+TEST POS    10          49.5              59.5
 
-Therefore the probability, or predictive value, that they have MMV is 1.05%
+TEST NEG    0           940.5             940.5
 
-You learn that your friend has a positive rapid test for MMV. What do you tell them?
+TOTALS      10          990               1000  
 
-- Hmmmmmm
-So chances that they actually have MMV is 1 in 105 people.  You will contribute towards their therapy costs :-O
+
+
+So with the table we can now calculate for P(B):
+  P(B) = 59.5/1000  = 0.0595
+
+Now we can plug in values into Baye's Theorem:
+
+P(A|B) = (1*0.01)/0.0595 = 0.168
+
+Therefore the probability that this patient had MMV, given that they received a positive test is ~17%
+
+
+
+SOLUTION.Question_2:
+2)  You learn that your friend has a positive rapid test for MMV. What do you tell them?
+
+Well you could try to console them that their chances were relatively low and that they only had a 17% or very roughly 
+a 1 in 6 chance of actually having MMV. 
+OR, you could look at the probability associated with receiving a FALSE POSITIVE test for MMV!
+
+IN this case, P(A|B), is calculating the chance they DON'T have MMV given that they get a POSITIVE test result.
+P(A|B) = P(B|A)*P(A) / P(B)
+
+Where:
+
+P(A) = Proportion of population testing positive for MMV
+
+P(B) = Proportion of population that does not have MMV
+
+P(B|A) = Proportion of population minus proportion that will test POSITIVE for MMV
+
+P(A|B) = (1-0.17)*(0.0595)/(1-0.001) = 0.0498
+
+You could help raise your friend's spirits by letting them know that the probability of them receiving a FALSE POSITIVE
+or, chances that the test result came back wrong for a positive diagnosis of MMV is ~5%. 
+
+
+NOTE: It's been 25 years since I completed my Probability Course :-) I tried to figure the assignment out a few 
+different times using my memories, then read some more of the papers on the reading list (which gave some clues!) 
+then started to look online for some resources. I found the followng online resource and then used it to help me 
+work through the problems above in my own words. :-)
+http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Probability/BS704_Probability6.html
