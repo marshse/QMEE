@@ -1,0 +1,9 @@
+---
+title: "README_assignment_week_4_Feb"
+author: "SMR"
+date: '2019-02-03'
+output: html_document
+---
+Formulate two different hypotheses about your data, and describe how you would test them with two different permutation tests. Challenge yourself to come up with conceptually different tests, if this is reasonable for your data set.
+
+
