@@ -1,4 +1,4 @@
-Assignment_week_28_jan_part_2
+﻿Assignment_week_28_jan_part_2
 
 
 
@@ -9,11 +9,17 @@ Formulate a hypothesis about your data, and discuss how you would test it statis
 
 BACKGROUND INFORMATION:
 
-The spawning season for our fish species, S. ocellatus, runs from about the beginning of May to the end of June, or roughly an eight week cycle. We typically process fish during the height of the spawning season (mid May to mid June).
+The spawning season for our fish species, S. ocellatus, runs from about the beginning of May to the end of June, or 
+roughly an eight week cycle. We typically process fish during the height of the spawning season (mid May to mid June).
 
-This system has Females and three types of Males with alternative reproductive phenotypes/tactics (Nesting Male, Satellite/Intermediate Male, Sneaker Male). Male tactic is a life history trait that appears to be dependent on amount of growth between annual spawning cycles.
+This system has Females and three types of Males with alternative reproductive phenotypes/tactics 
+(Nesting Male, Satellite/Intermediate Male, Sneaker Male). Male tactic is a life history trait that appears to be 
+dependent on amount of growth between annual spawning cycles.
 
-Nesting Males make a nest of algae and invest in Parental Care, and Nest Maintenance and Defence. Satellite Males help bring in females, chase away Sneaker Males and sneak spawns. Sneaker Males hang near active nests and sneak spawns.  Females spawn in multiple nests over the season and perform no parental care. 
+Nesting Males make a nest of algae and invest in Parental Care, and Nest Maintenance and Defence. 
+Satellite Males help bring in females, chase away Sneaker Males and sneak spawns. 
+Sneaker Males hang near active nests and sneak spawns.  
+Females spawn in multiple nests over the season and perform no parental care. 
 
 Body Condition is an index that is calculated using: Weight/Standard Length ^ 3
 
@@ -21,8 +27,9 @@ Body Condition is an index that is calculated using: Weight/Standard Length ^ 3
 
 HYPOTHESIS 1:
 
-Body Condition (S. ocellatus) of the three Types of Males will differ.  This difference will be based upon fitness assumptions. We expct NM > SatM > SnM
-
+Body Condition (S. ocellatus) of the three Types of Males will differ.  This difference will be based upon fitness 
+assumptions and background information above. 
+We expect NM > SatM > SnM 
 
 (Null Hypothesis is assumed here)
 
@@ -33,11 +40,19 @@ A One-Way ANOVA can be used to compare Body Condition of each group of fish by T
 
 
 
-
-
 HYPOTHESIS 2:
 
-Body Condition (S. ocellatus) for each Type of Male may differ for each group but also decrease during the course of the field season (or over time). 
+Body Condition (S. ocellatus) for each Type of Male may differ for each group but also decrease during the course of the 
+field season (or over time). 
+
+ - Nesting Males do the most work over the course of the breeding season (make nest, court females, 
+    chase off sneakers, tend nest)
+ - Satellite Males help the Nesting Male by chasing off Sneaker Males and bringin in Females to the nest
+ - Sneaker Males follow females and look for active nests to sneak spawn in.
+
+Body condition over course of the field season may decrease the most for Nesting Males, then Satellite Males, 
+then Sneaker Males.
+
 
 (Null Hypothesis is assumed here)
 
@@ -46,7 +61,11 @@ STATISTICAL TESTS:
 
 An ANCOVA (or analysis of covariance) can be used to compare Body Condition, by Type, across Time
 
+JD: Avoid saying “will differ”: it leads others to sloppy thinking, even if you’ve cured yourself. Be careful about temporal comparisons; it may be best to just compare condition before and after. Or even just mass.
 
+## Week grade: Good (2/3)
+
+## Please submit things as .R, .txt, .md, or .rmd. .rtf, etc. Is unnecessarily complicated (I also just spent like 20 seconds trying to decapitalize that “I”)
 
 
 
