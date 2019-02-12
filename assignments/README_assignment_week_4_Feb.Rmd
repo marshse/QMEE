@@ -1,12 +1,23 @@
 ---
-title: "README_assignment_week_4_Feb"
+title: "README_assignment5_week_4_Feb"
 author: "SMR"
 date: '2019-02-03'
 output: html_document
 ---
+QUESTION:
 Formulate two different hypotheses about your data, and describe how you would test them with two different permutation tests. Challenge yourself to come up with conceptually different tests, if this is reasonable for your data set.
 
 
 HYPOTHESIS 1:
-Mean Body Condition will differ between Male Types (NM, Sat, sn)
+Mean Body Condition will differ between Male Types (NM, Sat, sn) on this scale
+High Body Condition:  Nm > Sat > sn   :Low Body Condition
+
+Statistical Test: A one-Way ANOVA can be used to compare the mean Body Condition of each group of fish by Type
+
+Permutation Test: 
+
+HYPOTESIS 2:
+
+
+
 
