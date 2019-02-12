@@ -21,7 +21,8 @@ fish_info_data2 <- fish_info_data %>%
   droplevels() %>% 
   select(Type, SL, Wt, Date) %>% 
   mutate(body_condition = 1e8 * (Wt/(10*SL)^3)) %>% 
-  mutate(Date=as.Date(paste0(Date,"-2016"), format="%d-%B-%Y"))         
+  mutate(Date=as.Date(paste0(Date,"-2016"), format="%d-%B-%Y")
+         )         
          
 (ggplot(fish_info_data2, aes(Type, body_condition))
   + geom_boxplot()
