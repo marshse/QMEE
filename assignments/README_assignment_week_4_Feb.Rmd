@@ -14,9 +14,11 @@ High Body Condition:  Nm > Sat > sn   :Low Body Condition
 
 Statistical Test: A one-Way ANOVA can be used to compare the mean Body Condition of each group of fish by Type
 
-Permutation Test: 
+Permutation Test: Test if there are statistically clear differences between means of Body Condition by Type.
 
-HYPOTESIS 2:
+
+
+HYPOTHESIS 2:
 
 
 

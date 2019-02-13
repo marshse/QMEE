@@ -7,6 +7,7 @@
 
 #  Mean Body Condition will differ between Male Types (NM, Sat, sn) based on assumptions
 #  of fitness investments.
+#  Using data from 2018 with larger sample sizes
 #  High Body Condition:  Nm > Sat > sn   :Low Body Condition
 
 library(tidyverse)
@@ -15,17 +16,20 @@ library(lmPerm)
 library(coin)
 library(gtools)
 
-fish_info_data <- read_csv("Corse_2016_Genetics_book.csv")
+# Using our 2018 data set as there are more samples!
+fish_info_data <- read_csv("Genetics book Corse 2018.csv")
 print(fish_info_data)
 
-# Select what data I want and fix date
+# Select what data I want, add body condition column and drop NA values. 
+# Date format is ok for this dataset
 fish_info_data2 <- fish_info_data %>% 
   filter((Type %in% c("NM","Sat","sn"))) %>% 
   droplevels() %>% 
   select(Type, SL, Wt, Date) %>% 
-  mutate(body_condition = 1e8 * (Wt/(10*SL)^3)) 
+  mutate(body_condition = 1e8 * (Wt/(10*SL)^3)) %>% 
+  drop_na(
+    )
 
-summarise(fish_info_data2)
 
 # Visualize the data         
 (ggplot(fish_info_data2, aes(Type, body_condition))
@@ -44,31 +48,27 @@ for (i in 1:1000) {
   res[i] <- mean(bdat[bdat$Type=="NM", "body_condition"])-
     mean((bdat[bdat$Type=="Sat", "body_condition"]))
 }
+# I haven't included the other male Type here (sn)
 
+
+# Works until HERE! :-( 
 
 (bdat
   %>% group_by(body_condition)
-  %>% summarise(Type=mean(body_condition))
+  %>% summarise(body_condition=mean(body_condition))
   %>% pull(body_condition)  ## extract a single column
   %>% diff()          ## difference between elements
 )
 
-par(las=1,bty="l")
-plot(prop.table(table(round(res,2))),
-     ylab="Proportion",axes=FALSE)
-axis(side=2)
-points(obs,0,pch=16,cex=1.5,col="red")
-
-# Works until HERE!
-
 obs <- mean(fish_info_data2[fish_info_data2$Type=="NM", "body_condition"])-
         mean(fish_info_data2[fish_info_data2$Type=="Sat", "body_condition"]
              )
+# Not sure how to put in all three Types? Nm, Sat, sn  
+
 
 hist(res,col = "gray", las=1, main="")
 abline(v=obs, col="red"
        )
-
 
 
 # One way ANOVA to examine differences of Mean of Body Condition by Type
