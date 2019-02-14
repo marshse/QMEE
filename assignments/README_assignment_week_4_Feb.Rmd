@@ -8,18 +8,34 @@ QUESTION:
 Formulate two different hypotheses about your data, and describe how you would test them with two different permutation tests. Challenge yourself to come up with conceptually different tests, if this is reasonable for your data set.
 
 
+DATA SET:
+Measurements taken on S. ocellatus fish during the spawning season May 15 to June 12, 2018.  Fish are identified by Type (NM, Sat, sn, Fem)
+
+
 HYPOTHESIS 1:
-Mean Body Condition will differ between Male Types (NM, Sat, sn) on this scale
+The Mean Body Condition will significantly differ between Male Types (NM, Sat, sn) on this scale
 High Body Condition:  Nm > Sat > sn   :Low Body Condition
 
-Statistical Test: A one-Way ANOVA can be used to compare the mean Body Condition of each group of fish by Type
+Permutation Test: 
+- Test if there are statistically clear differences between means of Body Condition by Type.
+- Do this by ranomly switching Body Condition scores between Types
 
-Permutation Test: Test if there are statistically clear differences between means of Body Condition by Type.
+Statistical Test: 
+- A one-Way ANOVA can be used to compare the mean Body Condition of each group of fish by Type
+
 
 
 
 HYPOTHESIS 2:
+Nesting Males will have higher Body Condition scores at the beginning of the spawning season than at the the end.
 
+Statistical Test: 
+- Compare the average Body Condition score of all NM caught in the first week vs the average Body Condition score of NM caught in the last week with a t-test
+
+Permutation Test: 
+- Compare the average Body Condition of all NM caught in the first week 
+- Test if there are statistically clear differences between means of Body Condition by Type.
+- Do this by ranomly switching Body Condition scores between NM caught in the first week and NM caught in the last week
 
 
 
