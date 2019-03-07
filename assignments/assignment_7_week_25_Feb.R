@@ -1,5 +1,8 @@
 # Assignment_7_week_25_Feb
 
+## IF possible, please don't mark this yet.  I am working on making it "less" horrible 
+## and trying to figure ot what I am doing here ..... thanks!! smr
+
 ## Install JAGS (and either rjags or R2jags). 
 ## Use jags to fit a Bayesian model to your data, in some way that at least roughly makes sense. 
 ## Discuss your prior assumptions, and compare your simple fit to an analogous frequentist fit.
