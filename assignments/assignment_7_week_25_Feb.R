@@ -1,7 +1,13 @@
 # Assignment_7_week_25_Feb
 
+# March_9
+# Thanks for holding off marking this assignment. It is still not "great" but have 
+# gotten a littLe further with some more research.
+
+### Feb_ 25  IGNORE THIS COMMENT (LINE 7-9)
 ## IF possible, please don't mark this yet.  I am working on making it "less" horrible 
 ## and trying to figure ot what I am doing here ..... thanks!! smr
+
 
 ## Install JAGS (and either rjags or R2jags). 
 ## Use jags to fit a Bayesian model to your data, in some way that at least roughly makes sense. 
@@ -75,6 +81,8 @@ dwplot(fi_d2.lm)
 ## at the very beginning ? And then I go back and run it in pieces and I am okay...
 
 
+# PLEASE SKIP AHEAD TO LINE 146 FOR THIS ASSIGNMENT
+
 ## Use jags to fit a Bayesian model to your data, in some way that at least 
 ## roughly makes sense. 
 
@@ -133,6 +141,39 @@ m1 <- lm(body_condition ~ Type, data=fi_d2, family=poisson)
 ## Apologies that this assignment is obviously not very easy to follow on my end.
 ## Working through examples and trying to apply them to my dataset in 
 ## a coherent manner. Still working through this exercise!
+
+
+###  MARCH 9, 2019
+
+## I have looked at on-line examples, Krucshke's book and examples, read through 
+## Gotelli and Ellis and the class examples and am still having difficulty
+## translating into a coherent R script for this assignment.
+## I've outlined the steps below and how I'd like to solve this ultimately.
+## Will continue to try to work this out!
+
+# BAYESIAN ANALYSIS (Gotelli and Ellison 2013)
+
+## 1. Specify hypothesis.
+# Mean body condition score between male Types (Fish species, S. ocellatus) 
+# will be higher for NM versus Sat 
+
+## 2. Specify parameters as random variables.
+# body_condition will be considered as a random variable
+
+## 3. Specify the prior probability distribution.
+# Little known about this system, use an uninformative prior
+# b_body_condition ~ dnorm(0, 0.001)
+
+## 4. Calculate the likelihood.
+# distribution that is proportional to the probablity that 
+# mean body condition is different between male types
+
+## 5. Calculate the posterior probability distribution.
+# = (Prior * likelihood) / normalizing constant
+
+## 6. Interpret the results.
+# examine means and standard deviations in lm vs bayesian model
+# compare credibility interval (Bayesian) with confidence interval (linear model) 
 
 
 
