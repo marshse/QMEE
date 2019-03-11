@@ -4,7 +4,7 @@
 
 library(tidyverse)
 library(ggplot2); theme_set(theme_bw())
-
+library(lmPerm)
 
 fish_info_data <- read.csv("Genetics book Corse 2018.csv")
 
@@ -61,6 +61,20 @@ g2+scale_y_log10()
 
 ##STOP HERE
 
+
+# Date is easier to read on the y axis :-)
+ggplot(fi_d1, aes(body_condition,Date))+
+  geom_point()+
+  geom_smooth(method = "glm",
+              formula = y~poly(x,2),
+              method.args=list(family=gaussian(link = "log")),
+              fill="blue")
+
+
+g2 <- g1+geom_smooth(method="glm", formula=y~poly(x,2),
+                     method.args=list(family="gaussian"))
+
+
 # Set up a data frame for predictions
 pred_df <- fi_d1(Date = seq(from = 1, to = 5, length = 10))
 
@@ -78,3 +92,16 @@ ggplot(fi_d1) +
 
 linear.model <-lm(body_condition ~ Date)
 
+
+
+
+##### TESTING HERE!!!!
+gg0 <- ggplot(fi_d1, aes(Date, body_condition))+geom_point()
+
+gg1 <- gg0 + geom_smooth(method="glm", colour="red",
+                         method.args=list(family=gaussian()))
+
+gg2 <- gg1+geom_smooth(method="glm", formula = y~poly(x,2),
+                       method.args=list(family="gaussian"))
+
+gg2+scale_y_log10()
