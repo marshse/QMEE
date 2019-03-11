@@ -1,4 +1,4 @@
-## Assignment_8_week_march_8
+## Assignment_8_week_march_4
 
 ## Generalized Linear Models
 
@@ -29,6 +29,7 @@ summary(fi_d1)
 
 g1 <- glm(body_condition ~ Date, data = fi_d1, family = gaussian)
 
+
 ## Examine for overdisperisan
 summary(g1)
 # Residual deviance/residual df is much less than 1
@@ -42,6 +43,9 @@ plot(g1)
 # data looks normally (gaussian) distributed and within Cook's distance of 0.5
 # but with a slight skew to the right?
 
+
+# Just because I couldn't figure out dotwhisker in an earlier assignment
+# and it also gives me some info about my data
 library(dotwhisker)
 dwplot(g1)
 
@@ -55,25 +59,44 @@ acf(residuals(g1))
 g2 <- g1+geom_smooth(method="glm", formula=y~poly(x,2),
                      method.args=list(family="gaussian"))
 # SMR: This is giving me a null set for g2  ?
-
 g2+scale_y_log10()
 
 
-##STOP HERE
-
-
+## Trying another approach to generate quadratic model
 # Date is easier to read on the y axis :-)
 ggplot(fi_d1, aes(body_condition,Date))+
   geom_point()+
   geom_smooth(method = "glm",
               formula = y~poly(x,2),
-              method.args=list(family=gaussian(link = "log")),
+              method.args=list(family=gaussian(link = "identity")),
               fill="blue")
-
 
 g2 <- g1+geom_smooth(method="glm", formula=y~poly(x,2),
                      method.args=list(family="gaussian"))
+# g2 still has a null set :-(
 
+
+
+#################################
+# This script generated gg data frames but I could not plot the quadratic model
+
+gg0 <- ggplot(fi_d1, aes(Date, body_condition))+geom_point()
+
+gg1 <- gg0 + geom_smooth(method="glm", colour="red",
+                         method.args=list(family=gaussian()))
+
+gg2 <- gg1+geom_smooth(method="glm", formula = y~poly(x,2),
+                       method.args=list(family="gaussian"))
+
+gg2+scale_y_log10()
+
+#################################
+
+
+
+#################################
+## THIS SECTION IS STILL IN PROGRESS
+## Trying yet another approach
 
 # Set up a data frame for predictions
 pred_df <- fi_d1(Date = seq(from = 1, to = 5, length = 10))
@@ -89,19 +112,6 @@ ggplot(fi_d1) +
   geom_point(aes(x = Date, y = body_condition)) +
   geom_line(aes(x = Date, y = predicted), data = pred_df)
 
-
 linear.model <-lm(body_condition ~ Date)
 
 
-
-
-##### TESTING HERE!!!!
-gg0 <- ggplot(fi_d1, aes(Date, body_condition))+geom_point()
-
-gg1 <- gg0 + geom_smooth(method="glm", colour="red",
-                         method.args=list(family=gaussian()))
-
-gg2 <- gg1+geom_smooth(method="glm", formula = y~poly(x,2),
-                       method.args=list(family="gaussian"))
-
-gg2+scale_y_log10()
