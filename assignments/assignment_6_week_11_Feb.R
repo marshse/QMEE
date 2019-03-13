@@ -10,7 +10,7 @@ library(tidyverse)
 library(ggplot2); theme_set(theme_light())
 library(lmPerm)
 library(emmeans)
-library(effects): carData
+library(effects) ##  carData
 
 # 1. Make a linear model
 
@@ -41,6 +41,8 @@ proc_fun <- function(data,types) {
 ## SMR: body condition is usually 100*(Wt/(10*SL)^3)) and JD suggested that
 ## "Since condition is more or less on an arbitrary scale, 
 ## why not multiply by a million to get human-friendly numbers?"
+## JD: A million is 1e6 ☺ – but the lesson here is that you should a comment 
+## when you do something weird like that.
 
 
 fi_d2 <- fish_info_data %>% proc_fun(types=c("NM","Sat"))    
