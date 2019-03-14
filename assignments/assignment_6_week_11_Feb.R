@@ -10,7 +10,7 @@ library(tidyverse)
 library(ggplot2); theme_set(theme_light())
 library(lmPerm)
 library(emmeans)
-library(effects) ##  carData
+library(effects)#: carData  #carData won't seem to load now?
 
 # 1. Make a linear model
 
@@ -52,12 +52,12 @@ fi_d3 <- fish_info_data %>% proc_fun(types=c("NM","Sat","sn"))
 par(mfrow=c(2,2)
   )
 
+# This didn't work!
 # One way ANOVA to examine differences of Mean of Body Condition by Type (NM, Sat, sn)
-fi_d3.aov<- aov(body_condition~Type, fi_d3)
-class(fi_d3.aov)
-summary(fi_d3.aov)
-plot(aov(fi_d3.aov, conf.level = 0.99),las=1, col = "purple"
-  )
+#fi_d3.aov<- aov(body_condition~Type, fi_d3)
+#class(fi_d3.aov)
+#summary(fi_d3.aov)
+#plot(aov(fi_d3.aov, conf.level = 0.99),las=1, col = "purple")
 
 # Now figured out how to use LM instead as unequal sample size for each male Type
 fi_d3.lm <- lm(body_condition~Type, fi_d3)
@@ -94,25 +94,24 @@ plot(lm(fi_d3.lm), las=1, col = "green"
 
 
 
-#   2.2  inferential plot (e.g., a coefficient plot, or something from emmeans or effects)
+#   2.2  inferential plot (e.g., a coefficient plot, or something from emmeans 
+# or effects)
 
-
-summary(allEffects(fi_d3.lm))
+#summary(allEffects(fi_d3.lm))
 coef(fi_d3.lm)
-plot(allEffects(fi_d3.lm))
+#plot(allEffects(fi_d3.lm))
 #This plot did not work :-(
 
 #Examples to try to work with:
-fish.lm <- lm(log(conc) ~ source + factor(percent), data = fi_d3)
-fish.emm.s <- emmeans(fish.lm, "source")
-pairs(fish.emm.s)
+#fish.lm <- lm(log(conc) ~ source + factor(percent), data = fi_d3)
+#fish.emm.s <- emmeans(fish.lm, "source")
+#pairs(fish.emm.s)
 
 # Another example to try to work with???
-warp.lm <- lm(breaks ~ wool * tension, data = warpbreaks)
-warp.emm <- emmeans(warp.lm, ~ tension | wool)
-plot(warp.emm)
-plot(warp.emm, by = NULL, comparisons = TRUE, adjust = "mvt", 
-     horizontal = FALSE)
+#warp.lm <- lm(breaks ~ wool * tension, data = warpbreaks)
+#warp.emm <- emmeans(warp.lm, ~ tension | wool)
+#plot(warp.emm)
+#plot(warp.emm, by = NULL, comparisons = TRUE, adjust = "mvt", horizontal = FALSE)
 
 #   I did a lot of research and tried a few different methods but I failed to be able to 
 # make something successfully for the second part of the assignment
