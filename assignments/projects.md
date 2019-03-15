@@ -18,7 +18,7 @@ DATA AVAILABLE:
     - Nest # [if known], 
     - date caught
 - Other Known Info: 
-  -Females can be 1, 2 or 3 years old. 
+  - Females can be 1, 2 or 3 years old. 
   - NM are 2 (and occasionally 3) years old, 
   - Sat Males are 1 or 2 years old, 
   - Sn Males are 1 (and occasionally 2) year old
@@ -43,6 +43,13 @@ QUESTIONS:
   ex. Can we compare at similar dates each year?
       Do spawning cyles follow similar patterns each year?
       Are spawning cycles each year affected by factors such as water temparature? other factors to consider?
+
+4. We have morphometric data that identifies both Nesting Males and Satellite males caught from the same nest across seasons.
+  - Do 'bigger" (or better body condition) Satellites associate with bigger (or better body condition) Nesting Males?
+    Does this change throughout the breeding season?
+    
+    
+
 
   
 
