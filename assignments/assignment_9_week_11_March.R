@@ -71,7 +71,7 @@ lm1 <-  lmer(body_condition ~ Type + (1+Type|Site), data=fi_d2)
 # Fixed Effect of body_condition_score
 # Random Effect of Site (left_far, left, main, main_right, right)
 
-# I still stuck at this point. I understand what I want to aks the program,
+# I am still stuck at this point. I understand what I want to ask the program,
 # but do not yet know the string of incantations to use....
 
 
