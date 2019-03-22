@@ -34,6 +34,7 @@ proc_fun <- function(data,types) {
          %>% droplevels()
          %>% select(Type, SL, Wt, Date)
          %>% mutate(body_condition = 1e8 * (Wt/(10*SL)^3))
+			%>% mutate_if(is.character, as.factor) ## COOL code from BB
          %>% drop_na())
   }
 
@@ -104,9 +105,12 @@ drop1(fi_d3.lm, test="F")
 
 #summary(allEffects(fi_d3.lm))
 coef(fi_d3.lm)
-#plot(allEffects(fi_d3.lm))
+plot(allEffects(fi_d3.lm))
 #This plot did not work :-(
 ## JD: Because effect is looking for numeric predictors
+## JD: Sorry, got that wrong. You just need to tell it that Type is a factor
+## This seems like an infelicity (because effects thinks differently than lm)
+## Fixed above (see COOL code)
 
 ## JD: You can plot model coefficients with dwplot
 library(dotwhisker)
