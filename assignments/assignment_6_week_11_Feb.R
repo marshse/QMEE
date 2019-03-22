@@ -53,6 +53,7 @@ par(mfrow=c(2,2)
   )
 
 # This didn't work!
+## JD: I don't generally recommend AOV
 # One way ANOVA to examine differences of Mean of Body Condition by Type (NM, Sat, sn)
 #fi_d3.aov<- aov(body_condition~Type, fi_d3)
 #class(fi_d3.aov)
@@ -97,10 +98,22 @@ plot(lm(fi_d3.lm), las=1, col = "green"
 #   2.2  inferential plot (e.g., a coefficient plot, or something from emmeans 
 # or effects)
 
+## JD: One good way to look at an anova-style model should be drop1
+drop1(fi_d3.lm, test="F")
+## This shows the overall significance of type
+
 #summary(allEffects(fi_d3.lm))
 coef(fi_d3.lm)
 #plot(allEffects(fi_d3.lm))
 #This plot did not work :-(
+## JD: Because effect is looking for numeric predictors
+
+## JD: You can plot model coefficients with dwplot
+library(dotwhisker)
+dwplot(fi_d3.lm)
+
+## JD: or drop the intercept to get a parameter for each level
+dwplot(lm <- lm(body_condition~Type-1, fi_d3))
 
 #Examples to try to work with:
 #fish.lm <- lm(log(conc) ~ source + factor(percent), data = fi_d3)
@@ -120,4 +133,5 @@ coef(fi_d3.lm)
 #   I am still trying to work through this to figure out how to get it to work!! 
 #   Thanks so much again for the extention!!!
 
+## Grade 1.8/3 (OK)
 
