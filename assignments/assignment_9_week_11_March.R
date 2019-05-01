@@ -1,4 +1,4 @@
-Assignment_9_week_11_March
+## Assignment_9_week_11_March
 
 ###  Make a (possibly generalized) linear mixed model for one or more of your hypotheses.
 ## Discuss what choices you made about mixed effects (both grouping variables and related 
@@ -27,6 +27,10 @@ library(lmPerm) # needed to run linear model
 
 # Data
 fish_info_data <- read_csv("Genetics_book_Corse_2018_v2.csv")
+
+## BMB: ideally all of this clean-up stuff would be in a separate file,
+## you would store the results and just read it in -- wouldn't have to keep
+##  copying all of this cleaning code
 
 # Clean data set and create body condition column
 proc_fun <- function(data,types) {
@@ -80,6 +84,12 @@ library(lme4) # needed to run linear mixed models
 
 lm1 <-  lmer(body_condition ~ Type + (1|Site), data=fi_d2)
 
+## BMB: you should at least consider (Type|Site) 
+
+lm2 <- update(lm1, . ~ . - (1|Site) + (Type|Site))
+
+## BMB: although this is indeed a singular fit ...
+
 # Check summary stats for the model
 summary(lm1)  
 # Var and Std Dev is very low for Random Effects. 
@@ -89,7 +99,6 @@ summary(lm1)
 
 # How does effects plot changes after running mixed model
 plot(allEffects(lm1))
-
 
 # P.S. Apologies for recent assignments that have had terrible formatting and 
 # chunks of code all over the place.  I've been a little lost the past couple 
